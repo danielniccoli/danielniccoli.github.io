@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Noita World Seed 119984861</title>
+
+	<link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+	<script src="/bootstrap/js/bootstrap.bundle.min.js"
+		integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+		crossorigin="anonymous"></script>
+
+	<style>
+		html,
+		body {
+			background-color: #222;
+		}
+
+		.osd-main {
+			height: 100vh;
+		}
+	</style>
+
+</head>
+
+<body>
+	<div id="openseadragon1" class="osd-main container-fluid p-0"></div>
+
+	<script src="/openseadragon/openseadragon.min.js"></script>
+	<script src="/openseadragonzoomlevels.js"></script>
+
+	<script type="text/javascript">
+		OpenSeadragon.setImageFormatsSupported({ webp: true });
+		var viewer = OpenSeadragon({
+			id: "openseadragon1",
+			prefixUrl: "/openseadragon/images/",
+			tileSources: "/iiif3/info.json",
+			maxZoomPixelRatio: 4,
+			imageSmoothingEnabled: false,
+			showNavigator: true,
+			animationTime: 0,
+			zoomPerScroll: 1.5
+		});
+
+		var zoomLevels = viewer.zoomLevels({
+			levels: [0.01, 0.05, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 2, 3, 4]
+		});
+	</script>
+</body>
+
+</html>

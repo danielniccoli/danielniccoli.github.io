@@ -1,0 +1,25 @@
+{
+  "@context": "http://iiif.io/api/image/3/context.json",
+  "id": "http://danielniccoli.github.io/iiif3",
+  "type": "ImageService3",
+  "protocol": "http://iiif.io/api/image",
+  "profile": "level0",
+  "width": 36864,
+  "height": 73728,
+  "tiles": [
+    {
+      "width": 512,
+      "scaleFactors": [
+        1,
+        2,
+        4,
+        8,
+        16,
+        32,
+        64,
+        128
+      ]
+    }
+  ],
+  "preferredFormats": [ "webp" ]
+}
